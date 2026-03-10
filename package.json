@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/VIA-Labs-Tech/networks.git"
+    "url": "https://github.com/brad-za/via-networks.git"
   },
   "license": "MIT",
   "publishConfig": {
