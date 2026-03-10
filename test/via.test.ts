@@ -54,7 +54,8 @@ describe('via(filter)', () => {
 
   it('returns all chains', () => {
     const chains = via('all');
-    expect(chains.length).toBe(10);
+    expect(chains.length).toBeGreaterThan(0);
+    expect(chains.length).toBe(via('mainnet').length + via('testnet').length);
   });
 });
 

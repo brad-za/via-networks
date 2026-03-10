@@ -1,0 +1,21 @@
+name: Update Chain Data
+on:
+  repository_dispatch:
+    types: [chain-update]
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npx tsx src/scripts/update-chain.ts '${{ toJson(github.event.client_payload) }}'
+      - run: npm run build
+      - run: npm test
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          title: 'chore: update chain ${{ github.event.client_payload.chainId }}'
+          branch: 'auto/chain-${{ github.event.client_payload.chainId }}'
+          commit-message: 'chore: update chain ${{ github.event.client_payload.chainId }} data'
