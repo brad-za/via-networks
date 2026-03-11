@@ -5,7 +5,7 @@ const chain: EvmChainConfig = {
   code: 'pol',
   network: 'testnet',
   type: 'evm',
-  chainId: 80002,
+  chainId: '80002',
   explorer: 'https://amoy.polygonscan.com/',
   tokens: {
     weth: '0x360ad4f9a9A8EFe9A8DCB5f461c4Cc1047E1Dcf9',

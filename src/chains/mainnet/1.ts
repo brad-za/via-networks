@@ -5,7 +5,7 @@ const chain: EvmChainConfig = {
   code: 'eth',
   network: 'mainnet',
   type: 'evm',
-  chainId: 1,
+  chainId: '1',
   explorer: 'https://etherscan.io/',
   tokens: {
     usdc: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
@@ -26,7 +26,7 @@ const chain: EvmChainConfig = {
     circleTokenMinter: '0xc4922d64a24675e16e1586e3e3aa56c06fabe907',
     isCCTPEnabled: true,
     cctpLeafChains: [
-      { chainId: 48900, rootManager: '0x3012C9175ef181Fb8Da827cc439cd88861cf6aaB', leafManager: '0x3fBD26bd2F4ea70042634ac10972C3E3DeaCd875' },
+      { chainId: '48900', rootManager: '0x3012C9175ef181Fb8Da827cc439cd88861cf6aaB', leafManager: '0x3fBD26bd2F4ea70042634ac10972C3E3DeaCd875' },
     ],
   },
 };

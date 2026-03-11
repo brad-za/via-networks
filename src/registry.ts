@@ -13,18 +13,18 @@ import chain_421614 from './chains/testnet/421614.js';
 import chain_11155111 from './chains/testnet/11155111.js';
 import chain_64364448 from './chains/testnet/64364448.js';
 
-const registry = new Map<number, ChainConfig>([
-  [1, chain_1],
-  [137, chain_137],
-  [13939, chain_13939],
-  [501464, chain_501464],
-  [1001, chain_1001],
-  [43113, chain_43113],
-  [80002, chain_80002],
-  [84532, chain_84532],
-  [421614, chain_421614],
-  [11155111, chain_11155111],
-  [64364448, chain_64364448],
+const registry = new Map<string, ChainConfig>([
+  ['1', chain_1],
+  ['137', chain_137],
+  ['13939', chain_13939],
+  ['501464', chain_501464],
+  ['1001', chain_1001],
+  ['43113', chain_43113],
+  ['80002', chain_80002],
+  ['84532', chain_84532],
+  ['421614', chain_421614],
+  ['11155111', chain_11155111],
+  ['64364448', chain_64364448],
 ]);
 
 export default registry;

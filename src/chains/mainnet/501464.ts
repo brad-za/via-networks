@@ -5,7 +5,7 @@ const chain: SolanaChainConfig = {
   code: 'solana',
   network: 'mainnet',
   type: 'solana',
-  chainId: 501464,
+  chainId: '501464',
   explorer: 'https://explorer.solana.com/',
   tokens: {
     usdc: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',

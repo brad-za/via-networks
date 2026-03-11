@@ -3,59 +3,59 @@ import viaChain from '../src/index.js';
 
 describe('viaChain(chainId)', () => {
   it('returns chain config by id', () => {
-    const eth = viaChain(1);
+    const eth = viaChain('1');
     expect(eth).toBeDefined();
-    expect(eth!.name).toBe('Ethereum Mainnet');
-    expect(eth!.chainId).toBe(1);
-    expect(eth!.type).toBe('evm');
+    expect((eth as any).name).toBe('Ethereum Mainnet');
+    expect((eth as any).chainId).toBe('1');
+    expect((eth as any).type).toBe('evm');
   });
 
   it('returns undefined for unknown chain', () => {
-    expect(viaChain(99999)).toBeUndefined();
+    expect(viaChain('99999')).toBeUndefined();
   });
 });
 
 describe('viaChain(filter)', () => {
   it('returns all mainnet chains', () => {
-    const chains = viaChain('mainnet');
+    const chains = viaChain('mainnet') as any[];
     expect(chains.length).toBeGreaterThan(0);
     expect(chains.every(c => c.network === 'mainnet')).toBe(true);
   });
 
   it('returns all testnet chains', () => {
-    const chains = viaChain('testnet');
+    const chains = viaChain('testnet') as any[];
     expect(chains.length).toBeGreaterThan(0);
     expect(chains.every(c => c.network === 'testnet')).toBe(true);
   });
 
   it('returns all evm chains', () => {
-    const chains = viaChain('evm');
+    const chains = viaChain('evm') as any[];
     expect(chains.length).toBeGreaterThan(0);
     expect(chains.every(c => c.type === 'evm')).toBe(true);
   });
 
   it('returns midnight chains', () => {
-    const chains = viaChain('midnight');
+    const chains = viaChain('midnight') as any[];
     expect(chains.length).toBe(1);
-    expect(chains[0].chainId).toBe(64364448);
+    expect(chains[0].chainId).toBe('64364448');
   });
 
   it('returns solana chains', () => {
-    const chains = viaChain('solana');
+    const chains = viaChain('solana') as any[];
     expect(chains.length).toBe(1);
-    expect(chains[0].chainId).toBe(501464);
+    expect(chains[0].chainId).toBe('501464');
   });
 
   it('returns reef chains', () => {
-    const chains = viaChain('reef');
+    const chains = viaChain('reef') as any[];
     expect(chains.length).toBe(1);
-    expect(chains[0].chainId).toBe(13939);
+    expect(chains[0].chainId).toBe('13939');
   });
 
   it('returns all chains', () => {
-    const chains = viaChain('all');
+    const chains = viaChain('all') as any[];
     expect(chains.length).toBeGreaterThan(0);
-    expect(chains.length).toBe(viaChain('mainnet').length + viaChain('testnet').length);
+    expect(chains.length).toBe((viaChain('mainnet') as any[]).length + (viaChain('testnet') as any[]).length);
   });
 });
 
@@ -79,32 +79,32 @@ describe('viaChain(compoundFilter)', () => {
 
 describe('viaChain.isSupported', () => {
   it('returns true for known chain', () => {
-    expect(viaChain.isSupported(1)).toBe(true);
+    expect(viaChain.isSupported('1')).toBe(true);
   });
 
   it('returns false for unknown chain', () => {
-    expect(viaChain.isSupported(99999)).toBe(false);
+    expect(viaChain.isSupported('99999')).toBe(false);
   });
 });
 
 describe('viaChain.isEvm / isMidnight / isSolana / isReef', () => {
   it('identifies evm chains', () => {
-    expect(viaChain.isEvm(1)).toBe(true);
-    expect(viaChain.isEvm(64364448)).toBe(false);
+    expect(viaChain.isEvm('1')).toBe(true);
+    expect(viaChain.isEvm('64364448')).toBe(false);
   });
 
   it('identifies midnight chains', () => {
-    expect(viaChain.isMidnight(64364448)).toBe(true);
-    expect(viaChain.isMidnight(1)).toBe(false);
+    expect(viaChain.isMidnight('64364448')).toBe(true);
+    expect(viaChain.isMidnight('1')).toBe(false);
   });
 
   it('identifies solana chains', () => {
-    expect(viaChain.isSolana(501464)).toBe(true);
-    expect(viaChain.isSolana(1)).toBe(false);
+    expect(viaChain.isSolana('501464')).toBe(true);
+    expect(viaChain.isSolana('1')).toBe(false);
   });
 
   it('identifies reef chains', () => {
-    expect(viaChain.isReef(13939)).toBe(true);
-    expect(viaChain.isReef(1)).toBe(false);
+    expect(viaChain.isReef('13939')).toBe(true);
+    expect(viaChain.isReef('1')).toBe(false);
   });
 });

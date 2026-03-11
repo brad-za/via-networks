@@ -1,47 +1,50 @@
 import type { ChainConfig, CollectionFilter, CompoundFilter } from './types/index.js';
 import registry from './registry.js';
 
-function viaChain(id: number): ChainConfig | undefined;
-function viaChain(filter: CollectionFilter): ChainConfig[];
+const COLLECTION_FILTERS: Set<string> = new Set([
+  'mainnet', 'testnet', 'evm', 'midnight', 'solana', 'reef', 'cardano', 'stellar', 'all',
+]);
+
+function viaChain(filter: string): ChainConfig | ChainConfig[] | undefined;
 function viaChain(filter: CompoundFilter): ChainConfig[];
-function viaChain(input: number | CollectionFilter | CompoundFilter): ChainConfig | ChainConfig[] | undefined {
-  if (typeof input === 'number') {
-    return registry.get(input);
+function viaChain(input: string | CompoundFilter): ChainConfig | ChainConfig[] | undefined {
+  if (typeof input !== 'string') {
+    const chains = Array.from(registry.values());
+    return chains.filter(c => {
+      if (input.network && c.network !== input.network) return false;
+      if (input.type && c.type !== input.type) return false;
+      return true;
+    });
   }
 
-  const chains = Array.from(registry.values());
-
-  if (typeof input === 'string') {
+  if (COLLECTION_FILTERS.has(input)) {
+    const chains = Array.from(registry.values());
     if (input === 'all') return chains;
     if (input === 'mainnet' || input === 'testnet') return chains.filter(c => c.network === input);
-    return chains.filter(c => c.type === input);
+    return chains.filter(c => c.type === input as CollectionFilter);
   }
 
-  return chains.filter(c => {
-    if (input.network && c.network !== input.network) return false;
-    if (input.type && c.type !== input.type) return false;
-    return true;
-  });
+  return registry.get(input);
 }
 
-viaChain.isSupported = (chainId: number): boolean => registry.has(chainId);
+viaChain.isSupported = (chainId: string): boolean => registry.has(chainId);
 
-viaChain.isEvm = (chainId: number): boolean => {
+viaChain.isEvm = (chainId: string): boolean => {
   const chain = registry.get(chainId);
   return chain?.type === 'evm';
 };
 
-viaChain.isMidnight = (chainId: number): boolean => {
+viaChain.isMidnight = (chainId: string): boolean => {
   const chain = registry.get(chainId);
   return chain?.type === 'midnight';
 };
 
-viaChain.isSolana = (chainId: number): boolean => {
+viaChain.isSolana = (chainId: string): boolean => {
   const chain = registry.get(chainId);
   return chain?.type === 'solana';
 };
 
-viaChain.isReef = (chainId: number): boolean => {
+viaChain.isReef = (chainId: string): boolean => {
   const chain = registry.get(chainId);
   return chain?.type === 'reef';
 };

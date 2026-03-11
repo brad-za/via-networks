@@ -5,7 +5,7 @@ const chain: EvmChainConfig = {
   code: 'nexis',
   network: 'testnet',
   type: 'evm',
-  chainId: 1001,
+  chainId: '1001',
   tokens: {
     weth: '0x0000000000000000000000000000000000000000',
     feeToken: '0x0000000000000000000000000000000000000000',

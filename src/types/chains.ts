@@ -1,23 +1,19 @@
 import type { BaseChainConfig } from './base.js';
 import type { EvmTokens, SolanaTokens } from './tokens.js';
 import type { EvmContracts, MidnightContracts, ReefContracts, SolanaContracts } from './contracts.js';
-import type { EvmCctp } from './cctp.js';
+import type { EvmCctpV2 } from './cctp.js';
 
 export interface EvmChainConfig extends BaseChainConfig {
   type: 'evm';
   explorer?: string;
   tokens: EvmTokens;
   contracts: EvmContracts;
-  cctp: EvmCctp;
+  cctp: EvmCctpV2;
 }
 
 export interface MidnightChainConfig extends BaseChainConfig {
   type: 'midnight';
   networkId: string;
-  nodeUrl: string;
-  indexerHttpUrl: string;
-  indexerWsUrl: string;
-  proofServerUrl: string;
   contracts: MidnightContracts;
 }
 
@@ -26,7 +22,7 @@ export interface ReefChainConfig extends BaseChainConfig {
   explorer?: string;
   tokens: EvmTokens;
   contracts: ReefContracts;
-  cctp: EvmCctp;
+  cctp: EvmCctpV2;
 }
 
 export interface SolanaChainConfig extends BaseChainConfig {

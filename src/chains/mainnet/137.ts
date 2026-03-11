@@ -5,7 +5,7 @@ const chain: EvmChainConfig = {
   code: 'pol',
   network: 'mainnet',
   type: 'evm',
-  chainId: 137,
+  chainId: '137',
   explorer: 'https://polygonscan.com/',
   tokens: {
     usdc: '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359',

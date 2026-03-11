@@ -5,7 +5,7 @@ const chain: EvmChainConfig = {
   code: 'eth',
   network: 'testnet',
   type: 'evm',
-  chainId: 11155111,
+  chainId: '11155111',
   explorer: 'https://sepolia.etherscan.io/',
   tokens: {
     weth: '0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9',

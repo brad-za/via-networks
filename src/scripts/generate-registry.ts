@@ -18,7 +18,7 @@ for (const network of ['mainnet', 'testnet'] as const) {
     const id = file.replace('.ts', '');
     const varName = `chain_${id}`;
     imports.push(`import ${varName} from './chains/${network}/${id}.js';`);
-    entries.push(`  [${id}, ${varName}],`);
+    entries.push(`  ['${id}', ${varName}],`);
   }
 }
 
@@ -27,7 +27,7 @@ import type { ChainConfig } from './types/index.js';
 
 ${imports.join('\n')}
 
-const registry = new Map<number, ChainConfig>([
+const registry = new Map<string, ChainConfig>([
 ${entries.join('\n')}
 ]);
 

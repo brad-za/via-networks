@@ -5,7 +5,7 @@ const chain: EvmChainConfig = {
   code: 'arb',
   network: 'testnet',
   type: 'evm',
-  chainId: 421614,
+  chainId: '421614',
   explorer: 'https://sepolia.arbiscan.io/',
   tokens: {
     weth: '0x980B62Da83eFf3D4576C647993b0c1D7faf17c73',

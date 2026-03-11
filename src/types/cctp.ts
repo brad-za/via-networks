@@ -1,10 +1,10 @@
 export interface CctpLeafChain {
-  chainId: number;
+  chainId: string;
   rootManager: string;
   leafManager: string;
 }
 
-export interface EvmCctp {
+export interface EvmCctpV2 {
   protoCCTPGateway?: string;
   intentCCTPGateway?: string;
   circleTokenMessenger?: string;

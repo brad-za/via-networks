@@ -5,7 +5,7 @@ const chain: EvmChainConfig = {
   code: 'avax',
   network: 'testnet',
   type: 'evm',
-  chainId: 43113,
+  chainId: '43113',
   explorer: 'https://testnet.snowtrace.io/',
   tokens: {
     usdc: '0x5425890298aed601595a70ab815c96711a31bc65',
@@ -24,10 +24,10 @@ const chain: EvmChainConfig = {
     circleTokenMinter: '0x4ed8867f9947a5fe140c9dc1c6f207f3489f501e',
     isCCTPEnabled: true,
     cctpLeafChains: [
-      { chainId: 64165, rootManager: '0xD882a92421490aD0e500043B7E60506F45bE6716', leafManager: '0x3EdCD98439d8fc68Fc46825C97880Af9eF4b0272' },
-      { chainId: 195, rootManager: '0x60fB013997CFa53729A9c8Dfbacecc65c8Dde897', leafManager: '0xa06f5842bB1bF8ea42397fb116BFA17c3F8c8c5b' },
-      { chainId: 779672, rootManager: '0x3bE439F306b4838f8E7Fa24646c04Ad192a42586', leafManager: '0x804bbFd5d5491Da318bAD9e665b01600861e54a7' },
-      { chainId: 173750, rootManager: '0x376736B474259EC3278F6c36CCfAB24BdDe24653', leafManager: '0x31c84d37Ff57E53a7a9fA77C57E62c557Bd4F15e' },
+      { chainId: '64165', rootManager: '0xD882a92421490aD0e500043B7E60506F45bE6716', leafManager: '0x3EdCD98439d8fc68Fc46825C97880Af9eF4b0272' },
+      { chainId: '195', rootManager: '0x60fB013997CFa53729A9c8Dfbacecc65c8Dde897', leafManager: '0xa06f5842bB1bF8ea42397fb116BFA17c3F8c8c5b' },
+      { chainId: '779672', rootManager: '0x3bE439F306b4838f8E7Fa24646c04Ad192a42586', leafManager: '0x804bbFd5d5491Da318bAD9e665b01600861e54a7' },
+      { chainId: '173750', rootManager: '0x376736B474259EC3278F6c36CCfAB24BdDe24653', leafManager: '0x31c84d37Ff57E53a7a9fA77C57E62c557Bd4F15e' },
     ],
   },
 };
