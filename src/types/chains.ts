@@ -1,12 +1,10 @@
 import type { BaseChainConfig } from './base.js';
-import type { RpcConfig } from './rpcs.js';
 import type { EvmTokens, SolanaTokens } from './tokens.js';
 import type { EvmContracts, MidnightContracts, ReefContracts, SolanaContracts } from './contracts.js';
 import type { EvmCctp } from './cctp.js';
 
 export interface EvmChainConfig extends BaseChainConfig {
   type: 'evm';
-  rpc: RpcConfig;
   explorer?: string;
   tokens: EvmTokens;
   contracts: EvmContracts;
@@ -25,7 +23,6 @@ export interface MidnightChainConfig extends BaseChainConfig {
 
 export interface ReefChainConfig extends BaseChainConfig {
   type: 'reef';
-  rpc: RpcConfig;
   explorer?: string;
   tokens: EvmTokens;
   contracts: ReefContracts;
@@ -34,7 +31,6 @@ export interface ReefChainConfig extends BaseChainConfig {
 
 export interface SolanaChainConfig extends BaseChainConfig {
   type: 'solana';
-  rpc?: RpcConfig;
   explorer?: string;
   tokens: SolanaTokens;
   contracts: SolanaContracts;

@@ -6,10 +6,6 @@ const chain: EvmChainConfig = {
   network: 'testnet',
   type: 'evm',
   chainId: 43113,
-  rpc: {
-    default: 'https://43113.rpc.vialabs.io/',
-    alchemy: 'https://avax-fuji.g.alchemy.com/v2/',
-  },
   explorer: 'https://testnet.snowtrace.io/',
   tokens: {
     usdc: '0x5425890298aed601595a70ab815c96711a31bc65',

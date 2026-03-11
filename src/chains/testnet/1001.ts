@@ -6,7 +6,6 @@ const chain: EvmChainConfig = {
   network: 'testnet',
   type: 'evm',
   chainId: 1001,
-  rpc: {},
   tokens: {
     weth: '0x0000000000000000000000000000000000000000',
     feeToken: '0x0000000000000000000000000000000000000000',

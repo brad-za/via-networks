@@ -6,10 +6,6 @@ const chain: EvmChainConfig = {
   network: 'testnet',
   type: 'evm',
   chainId: 421614,
-  rpc: {
-    default: 'https://sepolia-rollup.arbitrum.io/rpc',
-    alchemy: 'https://arb-sepolia.g.alchemy.com/v2/',
-  },
   explorer: 'https://sepolia.arbiscan.io/',
   tokens: {
     weth: '0x980B62Da83eFf3D4576C647993b0c1D7faf17c73',

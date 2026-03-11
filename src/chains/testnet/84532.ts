@@ -6,10 +6,6 @@ const chain: EvmChainConfig = {
   network: 'testnet',
   type: 'evm',
   chainId: 84532,
-  rpc: {
-    default: 'https://84532.rpc.vialabs.io/',
-    alchemy: 'https://base-sepolia.g.alchemy.com/v2/',
-  },
   explorer: 'https://sepolia.basescan.org/',
   tokens: {
     usdc: '0x036CbD53842c5426634e7929541eC2318f3dCF7e',

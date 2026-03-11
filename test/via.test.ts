@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import via from '../src/index.js';
+import viaChain from '../src/index.js';
 
-describe('via(chainId)', () => {
+describe('viaChain(chainId)', () => {
   it('returns chain config by id', () => {
-    const eth = via(1);
+    const eth = viaChain(1);
     expect(eth).toBeDefined();
     expect(eth!.name).toBe('Ethereum Mainnet');
     expect(eth!.chainId).toBe(1);
@@ -11,111 +11,100 @@ describe('via(chainId)', () => {
   });
 
   it('returns undefined for unknown chain', () => {
-    expect(via(99999)).toBeUndefined();
+    expect(viaChain(99999)).toBeUndefined();
   });
 });
 
-describe('via(filter)', () => {
+describe('viaChain(filter)', () => {
   it('returns all mainnet chains', () => {
-    const chains = via('mainnet');
+    const chains = viaChain('mainnet');
     expect(chains.length).toBeGreaterThan(0);
     expect(chains.every(c => c.network === 'mainnet')).toBe(true);
   });
 
   it('returns all testnet chains', () => {
-    const chains = via('testnet');
+    const chains = viaChain('testnet');
     expect(chains.length).toBeGreaterThan(0);
     expect(chains.every(c => c.network === 'testnet')).toBe(true);
   });
 
   it('returns all evm chains', () => {
-    const chains = via('evm');
+    const chains = viaChain('evm');
     expect(chains.length).toBeGreaterThan(0);
     expect(chains.every(c => c.type === 'evm')).toBe(true);
   });
 
   it('returns midnight chains', () => {
-    const chains = via('midnight');
+    const chains = viaChain('midnight');
     expect(chains.length).toBe(1);
     expect(chains[0].chainId).toBe(64364448);
   });
 
   it('returns solana chains', () => {
-    const chains = via('solana');
+    const chains = viaChain('solana');
     expect(chains.length).toBe(1);
     expect(chains[0].chainId).toBe(501464);
   });
 
   it('returns reef chains', () => {
-    const chains = via('reef');
+    const chains = viaChain('reef');
     expect(chains.length).toBe(1);
     expect(chains[0].chainId).toBe(13939);
   });
 
   it('returns all chains', () => {
-    const chains = via('all');
+    const chains = viaChain('all');
     expect(chains.length).toBeGreaterThan(0);
-    expect(chains.length).toBe(via('mainnet').length + via('testnet').length);
+    expect(chains.length).toBe(viaChain('mainnet').length + viaChain('testnet').length);
   });
 });
 
-describe('via(compoundFilter)', () => {
+describe('viaChain(compoundFilter)', () => {
   it('filters by network + type', () => {
-    const chains = via({ network: 'testnet', type: 'evm' });
+    const chains = viaChain({ network: 'testnet', type: 'evm' });
     expect(chains.length).toBeGreaterThan(0);
     expect(chains.every(c => c.network === 'testnet' && c.type === 'evm')).toBe(true);
   });
 
   it('filters by type only', () => {
-    const chains = via({ type: 'midnight' });
+    const chains = viaChain({ type: 'midnight' });
     expect(chains.length).toBe(1);
   });
 
   it('filters by network only', () => {
-    const chains = via({ network: 'mainnet' });
+    const chains = viaChain({ network: 'mainnet' });
     expect(chains.every(c => c.network === 'mainnet')).toBe(true);
   });
 });
 
-describe('via.isSupported', () => {
+describe('viaChain.isSupported', () => {
   it('returns true for known chain', () => {
-    expect(via.isSupported(1)).toBe(true);
+    expect(viaChain.isSupported(1)).toBe(true);
   });
 
   it('returns false for unknown chain', () => {
-    expect(via.isSupported(99999)).toBe(false);
+    expect(viaChain.isSupported(99999)).toBe(false);
   });
 });
 
-describe('via.isEvm / isMidnight / isSolana / isReef', () => {
+describe('viaChain.isEvm / isMidnight / isSolana / isReef', () => {
   it('identifies evm chains', () => {
-    expect(via.isEvm(1)).toBe(true);
-    expect(via.isEvm(64364448)).toBe(false);
+    expect(viaChain.isEvm(1)).toBe(true);
+    expect(viaChain.isEvm(64364448)).toBe(false);
   });
 
   it('identifies midnight chains', () => {
-    expect(via.isMidnight(64364448)).toBe(true);
-    expect(via.isMidnight(1)).toBe(false);
+    expect(viaChain.isMidnight(64364448)).toBe(true);
+    expect(viaChain.isMidnight(1)).toBe(false);
   });
 
   it('identifies solana chains', () => {
-    expect(via.isSolana(501464)).toBe(true);
-    expect(via.isSolana(1)).toBe(false);
+    expect(viaChain.isSolana(501464)).toBe(true);
+    expect(viaChain.isSolana(1)).toBe(false);
   });
 
   it('identifies reef chains', () => {
-    expect(via.isReef(13939)).toBe(true);
-    expect(via.isReef(1)).toBe(false);
-  });
-});
-
-describe('via.rpc', () => {
-  it('returns default rpc url', () => {
-    const rpc = via.rpc(1);
-    expect(rpc).toBe('https://1.rpc.vialabs.io/');
-  });
-
-  it('returns undefined for unknown chain', () => {
-    expect(via.rpc(99999)).toBeUndefined();
+    expect(viaChain.isReef(13939)).toBe(true);
+    expect(viaChain.isReef(1)).toBe(false);
   });
 });

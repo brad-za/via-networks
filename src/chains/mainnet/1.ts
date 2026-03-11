@@ -6,11 +6,6 @@ const chain: EvmChainConfig = {
   network: 'mainnet',
   type: 'evm',
   chainId: 1,
-  rpc: {
-    default: 'https://1.rpc.vialabs.io/',
-    alchemy: 'https://eth-mainnet.g.alchemy.com/v2/',
-    infura: 'https://mainnet.infura.io/v3/',
-  },
   explorer: 'https://etherscan.io/',
   tokens: {
     usdc: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',

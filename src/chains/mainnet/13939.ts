@@ -6,7 +6,6 @@ const chain: ReefChainConfig = {
   network: 'mainnet',
   type: 'reef',
   chainId: 13939,
-  rpc: {},
   tokens: {
     usdc: '0x7922d8785D93E692bb584e659b607Fa821e6a91a',
     weth: '0x0000000000000000000000000000000001000000',
