@@ -3,7 +3,9 @@ import type { ChainConfig } from './types/index.js';
 
 import chain_1 from './chains/mainnet/1.js';
 import chain_137 from './chains/mainnet/137.js';
+import chain_7776 from './chains/mainnet/7776.js';
 import chain_13939 from './chains/mainnet/13939.js';
+import chain_43114 from './chains/mainnet/43114.js';
 import chain_501464 from './chains/mainnet/501464.js';
 import chain_97 from './chains/testnet/97.js';
 import chain_998 from './chains/testnet/998.js';
@@ -23,7 +25,9 @@ import chain_64364448 from './chains/testnet/64364448.js';
 const registry = new Map<string, ChainConfig>([
   ['1', chain_1],
   ['137', chain_137],
+  ['7776', chain_7776],
   ['13939', chain_13939],
+  ['43114', chain_43114],
   ['501464', chain_501464],
   ['97', chain_97],
   ['998', chain_998],
