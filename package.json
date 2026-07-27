@@ -1,6 +1,6 @@
 {
   "name": "@brad-za/networks",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Single source of truth for all VIA chain data, contract deployments, and RPC endpoints",
   "type": "module",
   "main": "./dist/index.js",
