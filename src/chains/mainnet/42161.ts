@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'Base Mainnet',
-  code: 'base',
+  name: 'Arbitrum One',
+  code: 'arb',
   network: 'mainnet',
   type: 'evm',
-  chainId: '8453',
-  explorer: 'https://basescan.org/',
+  chainId: '42161',
+  explorer: 'https://arbiscan.io/',
   tokens: {
-    usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
-    weth: '0x4200000000000000000000000000000000000006',
-    feeToken: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+    usdc: '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
+    weth: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+    feeToken: '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'Base Mainnet',
-  code: 'base',
+  name: 'Hyper EVM',
+  code: 'hype',
   network: 'mainnet',
   type: 'evm',
-  chainId: '8453',
-  explorer: 'https://basescan.org/',
+  chainId: '999',
+  explorer: 'https://hyperevmscan.io/',
   tokens: {
-    usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
-    weth: '0x4200000000000000000000000000000000000006',
-    feeToken: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+    usdc: '0xb88339CB7199b77E23DB6E890353E22632Ba630f',
+    weth: '0x5555555555555555555555555555555555555555',
+    feeToken: '0xb88339CB7199b77E23DB6E890353E22632Ba630f',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

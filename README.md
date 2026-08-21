@@ -108,19 +108,40 @@ if (reef && reef.type === 'reef') {
 | Chain | ID | Code | Type |
 |-------|------|------|------|
 | Ethereum | 1 | eth | evm |
+| Optimism | 10 | op | evm |
+| Cronos | 25 | cro | evm |
+| BSC | 56 | bsc | evm |
 | Polygon | 137 | pol | evm |
+| Monad | 143 | mon | evm |
+| Sonic | 146 | sonic | evm |
+| OP BNB | 204 | opbnb | evm |
+| PulseChain | 369 | pls | evm |
+| Hyper EVM | 999 | hype | evm |
+| PandaSea | 7776 | pandasea | evm |
+| Base | 8453 | base | evm |
 | Reef | 13939 | reef | reef |
+| Arbitrum One | 42161 | arb | evm |
+| Avalanche | 43114 | avax | evm |
+| Upside | 61873 | upside | evm |
 | Solana | 501464 | solana | solana |
 
 ### Testnet
 | Chain | ID | Code | Type |
 |-------|------|------|------|
-| Nexis ZK | 1001 | nexis | evm |
+| BSC Testnet | 97 | bsc | evm |
+| Hyper EVM Testnet | 998 | hype | evm |
+| Nexis ZK Testnet | 1001 | nexis | evm |
+| OP BNB Testnet | 5611 | opbnb | evm |
+| PandaSea Testnet | 7770 | pandasea | evm |
 | Avalanche Fuji | 43113 | avax | evm |
+| Robinhood Testnet | 46630 | hood | evm |
+| Zircuit Garfield Testnet | 48898 | zircuit | evm |
+| Upside Testnet | 61872 | upside | evm |
 | Polygon Amoy | 80002 | pol | evm |
 | Base Sepolia | 84532 | base | evm |
 | Arbitrum Sepolia | 421614 | arb | evm |
 | Ethereum Sepolia | 11155111 | eth | evm |
+| OP Sepolia | 11155420 | op | evm |
 | Midnight | 64364448 | midnight | midnight |
 
 ## Types

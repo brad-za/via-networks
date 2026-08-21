@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'Base Mainnet',
-  code: 'base',
+  name: 'Sonic',
+  code: 'sonic',
   network: 'mainnet',
   type: 'evm',
-  chainId: '8453',
-  explorer: 'https://basescan.org/',
+  chainId: '146',
+  explorer: 'https://sonicscan.org/',
   tokens: {
-    usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
-    weth: '0x4200000000000000000000000000000000000006',
-    feeToken: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+    usdc: '0x29219dd400f2Bf60E5a23d13Be72B486D4038894',
+    weth: '0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38',
+    feeToken: '0x29219dd400f2Bf60E5a23d13Be72B486D4038894',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

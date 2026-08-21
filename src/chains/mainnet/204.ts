@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'Base Mainnet',
-  code: 'base',
+  name: 'OP BNB',
+  code: 'opbnb',
   network: 'mainnet',
   type: 'evm',
-  chainId: '8453',
-  explorer: 'https://basescan.org/',
+  chainId: '204',
+  explorer: 'https://opbnbscan.com/',
   tokens: {
-    usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+    usdc: '0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3',
     weth: '0x4200000000000000000000000000000000000006',
-    feeToken: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+    feeToken: '0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

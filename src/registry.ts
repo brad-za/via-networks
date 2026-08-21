@@ -2,10 +2,21 @@
 import type { ChainConfig } from './types/index.js';
 
 import chain_1 from './chains/mainnet/1.js';
+import chain_10 from './chains/mainnet/10.js';
+import chain_25 from './chains/mainnet/25.js';
+import chain_56 from './chains/mainnet/56.js';
 import chain_137 from './chains/mainnet/137.js';
+import chain_143 from './chains/mainnet/143.js';
+import chain_146 from './chains/mainnet/146.js';
+import chain_204 from './chains/mainnet/204.js';
+import chain_369 from './chains/mainnet/369.js';
+import chain_999 from './chains/mainnet/999.js';
 import chain_7776 from './chains/mainnet/7776.js';
+import chain_8453 from './chains/mainnet/8453.js';
 import chain_13939 from './chains/mainnet/13939.js';
+import chain_42161 from './chains/mainnet/42161.js';
 import chain_43114 from './chains/mainnet/43114.js';
+import chain_61873 from './chains/mainnet/61873.js';
 import chain_501464 from './chains/mainnet/501464.js';
 import chain_97 from './chains/testnet/97.js';
 import chain_998 from './chains/testnet/998.js';
@@ -25,10 +36,21 @@ import chain_64364448 from './chains/testnet/64364448.js';
 
 const registry = new Map<string, ChainConfig>([
   ['1', chain_1],
+  ['10', chain_10],
+  ['25', chain_25],
+  ['56', chain_56],
   ['137', chain_137],
+  ['143', chain_143],
+  ['146', chain_146],
+  ['204', chain_204],
+  ['369', chain_369],
+  ['999', chain_999],
   ['7776', chain_7776],
+  ['8453', chain_8453],
   ['13939', chain_13939],
+  ['42161', chain_42161],
   ['43114', chain_43114],
+  ['61873', chain_61873],
   ['501464', chain_501464],
   ['97', chain_97],
   ['998', chain_998],

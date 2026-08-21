@@ -13,7 +13,6 @@ const chain: EvmChainConfig = {
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish
     message: '0x0000000000000000000000000000000000000000',
-    gateway: '0x0000000000000000000000000000000000000000',
   },
   cctp: {},
 };
