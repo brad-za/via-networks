@@ -11,6 +11,7 @@ import chain_146 from './chains/mainnet/146.js';
 import chain_204 from './chains/mainnet/204.js';
 import chain_369 from './chains/mainnet/369.js';
 import chain_999 from './chains/mainnet/999.js';
+import chain_5042 from './chains/mainnet/5042.js';
 import chain_7776 from './chains/mainnet/7776.js';
 import chain_8453 from './chains/mainnet/8453.js';
 import chain_13939 from './chains/mainnet/13939.js';
@@ -45,6 +46,7 @@ const registry = new Map<string, ChainConfig>([
   ['204', chain_204],
   ['369', chain_369],
   ['999', chain_999],
+  ['5042', chain_5042],
   ['7776', chain_7776],
   ['8453', chain_8453],
   ['13939', chain_13939],
