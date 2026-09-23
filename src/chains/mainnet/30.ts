@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Rootstock',
+  code: 'rsk',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '30',
+  explorer: 'https://explorer.rootstock.io/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0x74c9f2b00581F1B11AA7ff05aa9F608B7389De67', // USDC.e, bridged
+    weth: '0x542fDA317318eBF1d3DEAf76E0b632741A7e677d',
+    feeToken: '0x74c9f2b00581F1B11AA7ff05aa9F608B7389De67',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

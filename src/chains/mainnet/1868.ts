@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Soneium',
+  code: 'soneium',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '1868',
+  explorer: 'https://soneium.blockscout.com/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0xbA9986D2381edf1DA03B0B9c1f8b00dc4AacC369', // USDC.e, bridged
+    weth: '0x4200000000000000000000000000000000000006',
+    feeToken: '0xbA9986D2381edf1DA03B0B9c1f8b00dc4AacC369',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

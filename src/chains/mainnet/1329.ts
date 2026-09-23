@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Sei',
+  code: 'sei',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '1329',
+  explorer: 'https://seiscan.io/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392',
+    weth: '0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7',
+    feeToken: '0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

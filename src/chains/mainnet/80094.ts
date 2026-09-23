@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Berachain',
+  code: 'bera',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '80094',
+  explorer: 'https://berascan.com/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0x549943e04f40284185054145c6E4e9568C1D3241', // USDC.e, bridged
+    weth: '0x6969696969696969696969696969696969696969',
+    feeToken: '0x549943e04f40284185054145c6E4e9568C1D3241',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

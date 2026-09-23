@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'CELO',
+  code: 'celo',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '42220',
+  explorer: 'https://celoscan.io/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0xcebA9300f2b948710d2653dD7B07f33A8B32118C',
+    weth: '0x471EcE3750Da237f93B8E339c536989b8978a438',
+    feeToken: '0xcebA9300f2b948710d2653dD7B07f33A8B32118C',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

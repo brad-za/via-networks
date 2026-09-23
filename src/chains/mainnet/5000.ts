@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Mantle',
+  code: 'mantle',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '5000',
+  explorer: 'https://mantlescan.xyz/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0x09Bc4E0D864854c6aFB6eB9A9cdF58aC190D0dF9', // bridged
+    weth: '0x78c1b0C915c4FAA5FffA6CAbf0219DA63d7f4cb8',
+    feeToken: '0x09Bc4E0D864854c6aFB6eB9A9cdF58aC190D0dF9',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

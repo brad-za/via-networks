@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Stable',
+  code: 'stable',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '988',
+  explorer: 'https://stablescan.xyz/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0x779Ded0c9e1022225f8E0630b35a9b54bE713736', // USDT0 — gas and ERC-20 on one balance; no USDC on chain
+    weth: '0x779Ded0c9e1022225f8E0630b35a9b54bE713736',
+    feeToken: '0x779Ded0c9e1022225f8E0630b35a9b54bE713736',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

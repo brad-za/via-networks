@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Worldchain',
+  code: 'world',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '480',
+  explorer: 'https://worldscan.org/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0x79A02482A880bCE3F13e09Da970dC34db4CD24d1',
+    weth: '0x4200000000000000000000000000000000000006',
+    feeToken: '0x79A02482A880bCE3F13e09Da970dC34db4CD24d1',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

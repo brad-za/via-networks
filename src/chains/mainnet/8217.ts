@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Kaia',
+  code: 'kaia',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '8217',
+  explorer: 'https://kaiascan.io/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0xE2053BCf56D2030d2470Fb454574237cF9ee3D4B', // USDC.e, bridged
+    weth: '0x19Aac5f612f524B754CA7e7c41cbFa2E981A4432',
+    feeToken: '0xE2053BCf56D2030d2470Fb454574237cF9ee3D4B',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Citrea',
+  code: 'citrea',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '4114',
+  explorer: 'https://explorer.mainnet.citrea.xyz/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0xE045e6c36cF77FAA2CfB54466D71A3aEF7bbE839', // USDC.e, bridged
+    weth: '0x3100000000000000000000000000000000000006',
+    feeToken: '0xE045e6c36cF77FAA2CfB54466D71A3aEF7bbE839',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'ZKsync Era',
+  code: 'zksync',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '324',
+  explorer: 'https://explorer.zksync.io/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4',
+    weth: '0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91',
+    feeToken: '0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

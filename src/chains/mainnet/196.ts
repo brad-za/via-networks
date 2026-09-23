@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'X Layer',
+  code: 'xlayer',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '196',
+  explorer: 'https://www.oklink.com/xlayer',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0xB6CEceAB302E2E4948951eE7843FC24E92933061',
+    weth: '0xe538905cf8410324e03A5A23C1c177a474D59b2b',
+    feeToken: '0xB6CEceAB302E2E4948951eE7843FC24E92933061',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

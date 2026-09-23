@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Morph',
+  code: 'morph',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '2818',
+  explorer: 'https://explorer.morphl2.io/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0xCfb1186F4e93D60E60a8bDd997427D1F33bc372B',
+    weth: '0x5300000000000000000000000000000000000011',
+    feeToken: '0xCfb1186F4e93D60E60a8bDd997427D1F33bc372B',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish

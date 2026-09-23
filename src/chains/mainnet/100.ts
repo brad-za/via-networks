@@ -1,16 +1,16 @@
 import type { EvmChainConfig } from '../../types/index.js';
 
 const chain: EvmChainConfig = {
-  name: 'PulseChain',
-  code: 'pls',
+  name: 'Gnosis',
+  code: 'gnosis',
   network: 'mainnet',
   type: 'evm',
-  chainId: '369',
-  explorer: 'https://scan.pulsechain.com/',
+  chainId: '100',
+  explorer: 'https://gnosisscan.io/',
   tokens: {
-    usdc: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
-    weth: '0xA1077a294dDE1B09bB078844df40758a5D0f9a27',
-    feeToken: '0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07',
+    usdc: '0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0', // USDC.e, bridged
+    weth: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d',
+    feeToken: '0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0',
   },
   contracts: {
     // VIA contracts not yet deployed — placeholders, update via slimcli publish
