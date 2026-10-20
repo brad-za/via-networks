@@ -64,6 +64,7 @@ import chain_61872 from './chains/testnet/61872.js';
 import chain_80002 from './chains/testnet/80002.js';
 import chain_84532 from './chains/testnet/84532.js';
 import chain_421614 from './chains/testnet/421614.js';
+import chain_5042002 from './chains/testnet/5042002.js';
 import chain_11155111 from './chains/testnet/11155111.js';
 import chain_11155420 from './chains/testnet/11155420.js';
 import chain_64364448 from './chains/testnet/64364448.js';
@@ -132,6 +133,7 @@ const registry = new Map<string, ChainConfig>([
   ['80002', chain_80002],
   ['84532', chain_84532],
   ['421614', chain_421614],
+  ['5042002', chain_5042002],
   ['11155111', chain_11155111],
   ['11155420', chain_11155420],
   ['64364448', chain_64364448],
